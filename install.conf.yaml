@@ -1,0 +1,15 @@
+- defaults:
+        link:
+                relink: true
+                glob: true
+                force: true
+                create: true
+
+- link:
+        ~/.config/i3/: i3/*
+        ~/.config/MangoHud/: MangoHud/*
+        ~/.config/polybar/: polybar/*
+        ~/.config/rofi/: rofi/*
+        ~/.config/xfce4/: xfce4/*
+        ~/.zshrc: zsh/zshrc
+        ~/.vimrc: vim/vimrc   
