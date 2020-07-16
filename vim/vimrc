@@ -22,6 +22,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Initialize plugin system
 call plug#end()
