@@ -12,4 +12,5 @@
         ~/.config/rofi/: rofi/*
         ~/.config/xfce4/: xfce4/*
         ~/.zshrc: zsh/zshrc
-        ~/.vimrc: vim/vimrc   
+        ~/.vimrc: vim/vimrc
+        ~/.rclone.sh: rclone/rclone.sh
