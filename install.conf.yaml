@@ -13,4 +13,5 @@
         ~/.config/xfce4/: xfce4/*
         ~/.zshrc: zsh/zshrc
         ~/.vimrc: vim/vimrc
+        ~/.vim/coc-settings.json: vim/coc-settings.json
         ~/.rclone.sh: rclone/rclone.sh
