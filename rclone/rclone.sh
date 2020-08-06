@@ -1,6 +1,6 @@
 #!/bin/bash
 
-folders=("Documentos" "faculdade" "Imagens")
+folders=("Documentos" "faculdade" "Imagens" "courses")
 
 echo "rclone run at $(date)" >> "$HOME/.rclone.log"
 for folder in ${folders[@]}; do    
