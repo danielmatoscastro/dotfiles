@@ -105,9 +105,9 @@ alias cl="clear"
 alias docker="sudo docker"
 
 # Fix for Tilix
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
+#if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+#        source /etc/profile.d/vte.sh
+#fi
 
 # This prevents crash when Ctrl+s
 stty -ixon
