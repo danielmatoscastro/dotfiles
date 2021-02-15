@@ -8,5 +8,5 @@ md2pdf(){
     pdf=${@[-1]}
     md=${@:1:${#}-1}
 
-    pandoc -V geometry:margin=1in -s -o $pdf "$md"
+    pandoc -V geometry:a4paper -s -o $pdf "$md"
 }
