@@ -104,10 +104,13 @@ source $ZSH/oh-my-zsh.sh
 alias cl="clear"
 alias docker="sudo docker"
 
+<<<<<<< HEAD
 # Fix for Tilix
 #if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 #        source /etc/profile.d/vte.sh
 #fi
 
+=======
+>>>>>>> d23ec9b28c70618d6e28fa3e85baf5e0467f378d
 # This prevents crash when Ctrl+s
 stty -ixon
