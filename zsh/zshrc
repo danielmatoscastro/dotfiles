@@ -118,7 +118,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 #Path to dotfiles folder
-export DOTFILES="/home/daniel/meus-repositorios/dotfiles"
+export DOTFILES="/home/daniel/data/meus-repositorios/dotfiles"
 
 # Load useful functions
 source $DOTFILES/scripts/functions.sh
