@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cl="clear"
 alias docker="sudo docker"
+alias ctte="sh /home/daniel/data/faculdade/interacao-humano-computador/ctteCoop_v.2.6.21/run_linux.sh &"
+alias ihc_sw="ctte"
 
 # This prevents crash when Ctrl+s
 stty -ixon
