@@ -33,6 +33,11 @@ export SISOP_I="$FACULDADE/sistemas-operacionais-I"
 export SEMANTICA="$FACULDADE/semantica-formal"
 export MLP="$FACULDADE/modelos-de-linguagens-de-programacao"
 export ESPECIFICACAO="$FACULDADE/especificacao-formal"
+export REDES="$FACULDADE/redes"
+export COMPILADORES="$FACULDADE/compiladores"
+export SISOP_II="$FACULDADE/sistemas-operacionais-II"
+export FTF="$FACULDADE/fundamentos-de-tolerancia-a-falhas"
+export HISTORIA="$FACULDADE/historia-da-computacao"
 
 ## Sourcing other files
 ### Load useful functions
