@@ -2,6 +2,7 @@
 import os
 import shutil
 import logging
+import argparse
 from gitignore_parser import parse_gitignore
 from git import Repo
 
@@ -9,7 +10,7 @@ BACKUP_IGNORE_FILE = ".backupignore"
 TIMESHIFT_FOLDER_SRC = "/home/daniel/data/timeshift"
 TIMESHIFT_FOLDER_DST = "/media/daniel/hd-externo-ext4"
 REGULAR_BACKUP_FOLDER_SRC = "/home/daniel/data"
-REGULAR_BACKUP_FOLDER_DST = "/media/daniel/hd-externo"
+REGULAR_BACKUP_FOLDER_DST = "/media/daniel/hd-externo/backup"
 REPOS_FOLDER = "/home/daniel/data/meus-repositorios"
 
 should_ignore = parse_gitignore(BACKUP_IGNORE_FILE)
@@ -19,10 +20,10 @@ def backup_file(full_path_src, path_dst):
     full_path_dst = os.path.join(path_dst, os.path.basename(full_path_src))
 
     if os.path.exists(full_path_dst):
-        logging.info(f'deleting {full_path_dst}')
+        logging.debug(f'deleting {full_path_dst}')
         os.remove(full_path_dst)
 
-    logging.info(f'copying {full_path_src} to {full_path_dst}')
+    logging.debug(f'copying {full_path_src} to {full_path_dst}')
     shutil.copy2(full_path_src, path_dst)
 
 
@@ -32,10 +33,10 @@ def ignore(src, names):
 
 def backup_dir(full_path_src, full_path_dst):
     if os.path.exists(full_path_dst):
-        logging.info(f'deleting {full_path_dst}')
+        logging.debug(f'deleting {full_path_dst}')
         shutil.rmtree(full_path_dst)
 
-    logging.info(f'copying {full_path_src} to {full_path_dst}')
+    logging.debug(f'copying {full_path_src} to {full_path_dst}')
     shutil.copytree(full_path_src, full_path_dst, ignore=ignore)
 
 
@@ -52,7 +53,7 @@ def backup_regular_files():
             else:
                 backup_dir(full_path_src, full_path_dst)
         else:
-            logging.info(f'ignoring {path}')
+            logging.debug(f'ignoring {path}')
 
     logging.info('ending regular files backup')
 
@@ -98,11 +99,36 @@ def check_git_repos():
     logging.info('git repos checks finished')
 
 
-if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='Backup script. You know how to use.')
+    parser.add_argument('--log-level',
+                        dest='log_level',
+                        type=str,
+                        help='Log level. Default: INFO.',
+                        default='INFO',
+                        choices=['NOTSET', 'DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'])
+
+    parser.add_argument('--timeshift',
+                        dest='enable_timeshift',
+                        action='store_true',
+                        help='Enable timeshift folder backup. If you set this flag, don\'t forget sudo.')
+
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    logging.basicConfig(level=args.log_level)
+
     try:
         backup_regular_files()
-        backup_timeshift_files()
+        if args.enable_timeshift:
+            backup_timeshift_files()
         check_git_repos()
     except Exception as err:
         logging.error(f'exception: {str(err)}')
+
+
+if __name__ == '__main__':
+    main()
