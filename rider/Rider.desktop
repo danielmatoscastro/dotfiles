@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/home/daniel/rider/bin/rider.sh
+Name=Rider
+Comment=Rider
+Icon=/home/daniel/rider/bin/rider.png
+X-Desktop-File-Install-Version=0.24
