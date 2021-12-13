@@ -8,9 +8,9 @@ from git import Repo
 
 BACKUP_IGNORE_FILE = ".backupignore"
 TIMESHIFT_FOLDER_SRC = "/home/daniel/data/timeshift"
-TIMESHIFT_FOLDER_DST = "/media/daniel/hd-externo-ext4"
+TIMESHIFT_FOLDER_DST = "/media/daniel/backup-ext4"
 REGULAR_BACKUP_FOLDER_SRC = "/home/daniel/data"
-REGULAR_BACKUP_FOLDER_DST = "/media/daniel/hd-externo/backup"
+REGULAR_BACKUP_FOLDER_DST = "/media/daniel/backup"
 REPOS_FOLDER = "/home/daniel/data/meus-repositorios"
 
 should_ignore = parse_gitignore(BACKUP_IGNORE_FILE)
