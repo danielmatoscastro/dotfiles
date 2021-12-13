@@ -15,3 +15,4 @@
         ~/.vimrc: vim/vimrc
         ~/.vim/coc-settings.json: vim/coc-settings.json
         ~/.rclone.sh: rclone/rclone.sh
+        ~/.local/share/applications/Rider.desktop: rider/Rider.desktop
