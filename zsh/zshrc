@@ -38,6 +38,11 @@ export COMPILADORES="$FACULDADE/compiladores"
 export SISOP_II="$FACULDADE/sistemas-operacionais-II"
 export FTF="$FACULDADE/fundamentos-de-tolerancia-a-falhas"
 export HISTORIA="$FACULDADE/historia-da-computacao"
+export APRENDIZADO="$FACULDADE/aprendizado-de-maquina"
+export VISAO="$FACULDADE/fundamentos-de-visao-computacional"
+export PROJETO_BD="$FACULDADE/projeto-de-banco-de-dados"
+export HIPERDOCS="$FACULDADE/projeto-de-hiperdocumentos"
+export LAMBDA="$FACULDADE/topicos-especiais-em-computacao-xv-lambda"
 
 ## Sourcing other files
 ### Load useful functions
