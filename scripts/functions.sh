@@ -28,3 +28,7 @@ md2html_convert_all(){
         pandoc -s -o "$file_html.html" "$file" --metadata pagetitle="$file_html"
   done
 }
+
+count_file_links() {
+    grep -oE 'http[s]?://[^ ]+' ./*.md | cut -d ':' -f 1 | uniq -c | sort -rn 
+}
