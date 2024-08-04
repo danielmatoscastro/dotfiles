@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 OUTPUT_DIR=mint-wallpapers
 TEMP_OUTPUT_DIR=/tmp/mint-wallpapers
@@ -17,7 +17,6 @@ do
         curl -so "$TEMP_OUTPUT_DIR/$tar_gz" "$BASE_URL/$package/$tar_gz" && echo "OK." || echo "Failure."
     done
 done
-
 
 for tar_gz in "$TEMP_OUTPUT_DIR"/*.tar.gz
 do 
