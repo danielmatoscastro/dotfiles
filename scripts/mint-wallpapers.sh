@@ -30,3 +30,5 @@ do
 done
 
 rm -r $TEMP_OUTPUT_DIR
+
+echo "Done"
